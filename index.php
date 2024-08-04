@@ -154,9 +154,6 @@ function getMessageImageUrl($qq) {
             }
         }
         .github-link {
-            position: fixed;
-            top: 20px;
-            right: 20px;
             background-color: #333;
             color: #fff;
             padding: 10px 20px;
@@ -166,6 +163,10 @@ function getMessageImageUrl($qq) {
             transition: background-color 0.3s;
             display: flex;
             align-items: center;
+            max-width: 200px; /* 设置最大宽度 */
+            overflow: hidden; /* 防止内容溢出 */
+            text-overflow: ellipsis; /* 超出部分显示省略号 */
+            white-space: nowrap; /* 不换行 */
         }
         .github-link img {
             width: 20px;
@@ -175,13 +176,15 @@ function getMessageImageUrl($qq) {
         .github-link:hover {
             background-color: #555;
         }
+        .github-logo 
+        {
+             display: block;
+             margin: 0 auto; /* 这将使元素在水平方向上居中 */
+        }
+
     </style>
 </head>
 <body class="bg-gray-100">
-    <a href="https://github.com/your-username/your-repo" class="github-link">
-        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo">
-        GitHub
-    </a>
     <div class="container mx-auto p-6">
         <h1 class="text-3xl font-bold text-center text-blue-600 mb-6">留言板</h1>
 
@@ -203,7 +206,7 @@ function getMessageImageUrl($qq) {
                     <label class="block text-gray-700 font-bold mb-2" for="qq">
                         QQ号
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="qq" type="text" name="qq" placeholder="QQ号（用于展示头像）" required>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="qq" type="text" name="qq" placeholder="QQ号" required>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 font-bold mb-2" for="nickname">
@@ -246,9 +249,12 @@ function getMessageImageUrl($qq) {
 
     <footer class="text-center mt-10">
         <div class="copyright">
-            <p>&copy; 2024 PHP留言板. All rights reserved.</p>
+            <p>&copy; 2024 Aria. All rights reserved.</p>
             <p>原版By-QQ-3220257676</p>
             <p>修改By-QQ-2024659553</p>
+        </div>
+        <div class="container">
+             <a href="https://github.com/FurryAria/PHP-Messages" target="_blank">GITHUB仓库</a>
         </div>
     </footer>
 </body>
