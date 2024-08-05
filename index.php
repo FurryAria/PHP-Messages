@@ -32,7 +32,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'message' => $message,
         'ip' => $ip
     ];
-    file_put_contents($messagesFile, json_encode($messages));
+
+    // 检查JSON编码
+    $json = json_encode($messages);
+    if (json_last_error() !== JSON_ERROR_NONE) {
+        die("JSON编码错误: " . json_last_error_msg());
+    }
+
+    // 写入文件
+    if (file_put_contents($messagesFile, $json) === false) {
+        die("写入文件失败");
+    }
 }
 
 function getMessageImageUrl($qq) {
