@@ -20,11 +20,9 @@
 message/
 │
 ├── index.php          // 留言墙主页面
-├── messages.json      // 存储留言数据的JSON文件
+├── messages.json      // 存储留言数据的JSON文件（留言后自动创建）
 └── README.md          // 本说明文件
 ```
-##注意事项
-需要首先在messages.json创建一个留言才不会报错，所以您会看到默认自带一段留言，可进入messages.json文件删除或更改
 ## 更新日志
 - 版本1.0：发布初始版本。
 ## 反馈与支持
