@@ -2,7 +2,7 @@
 ## 简介
 这是一个基于PHP的简易留言墙程序，使用本地文件存储来保存留言数据。用户可以在此程序上留下自己的留言，查看其他用户的留言。本程序适用于个人网站、社区论坛或小型社交平台，提供一个无需数据库的环境。不适用于大型网站，因为使用的是本地JSON存储。
 ## 在线体验
-[[https://furryaria.top/messages](https://furryaria.top/messages)]
+[https://furryaria.top/messages(https://furryaria.top/messages)]
 ## 功能特点
 - 留言发布：用户可以发表自己的留言。
 - 留言查看：展示所有用户的留言。
